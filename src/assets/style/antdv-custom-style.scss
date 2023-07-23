@@ -1,0 +1,154 @@
+// CSS for table
+.ant-table-wrapper {
+  border-radius: 8px;
+  .ant-table table {
+    font-size: 12px;
+  }
+  .ant-table-tbody > tr {
+    cursor: pointer;
+    height: 70px;
+  }
+  .ant-table-tbody > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td {
+    background-color: $primary-lightgrey;
+  }
+  .ant-table-thead > tr > th {
+    background: none;
+    color: $secondary-darkgrey;
+  }
+  .ant-pagination-item {
+    border-radius: 8px;
+    background-color: $main-light;
+    &:hover {
+      border-color: $secondary-gray
+    }
+  }
+  .ant-pagination-item-active {
+    background-color: $primary-red;
+    border: none;
+    font-weight: bold;
+    border-radius: 8px
+  }
+  .ant-pagination-item-active a {
+    color: $main-light !important;
+  }
+  .ant-pagination-item-active:focus a, .ant-pagination-item-active:hover a {
+    border: none;
+    color: $primary-red
+  }
+  .ant-pagination-item a {
+    color: $primary-red;
+    font-weight: bold;
+    width: 32px;
+  } 
+  .ant-pagination-item:hover a {
+    color: $primary-red;
+  }
+  .ant-pagination-prev .ant-pagination-item-link {
+    display: none;
+  }
+  .ant-pagination-next .ant-pagination-item-link {
+    display: none;
+  }
+  .ant-pagination-options-size-changer.ant-select {
+    display: none
+  }
+  .ant-table-row-cell-break-word {
+    font-weight: 400;
+    color: $main-dark;
+  }
+  .ant-table-thead > tr > th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+    display: none;
+  }
+  .ant-table-empty .ant-table-tbody > tr.ant-table-placeholder {
+    color: $status-deactivated;
+    font-size: 16px;
+  }
+}
+// CSS for a-badge
+.ant-badge-status {
+  width: 14px;
+  padding-left: 5px;
+}
+// CSS for a-input
+.ant-input-group-addon:last-child {
+  border-radius: 0 8px 8px 0 !important;
+}
+.ant-input, .ant-input-password {
+  border-radius: 8px !important;
+  &:hover {
+    border-color: $primary-red !important;
+  }
+}
+.ant-input:focus, .ant-input-focused, .ant-input-affix-wrapper:focus, .ant-input-affix-wrapper-focused {
+  border-color: $primary-red !important;
+  box-shadow: 0 0 0 2px $primary-lightred !important;
+}
+
+// CSS for a-switch
+.ant-switch-checked {
+  background-color: $primary-red !important;
+  &:focus {
+    box-shadow: 0 0 0 2px $primary-lightred !important;
+  }
+}
+// CSS for a-select
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  border-radius: 8px !important;
+}
+.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  border-color: $primary-red !important;
+  box-shadow: 0 0 0 2px $primary-lightred !important;
+}
+.ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+  border-color: $primary-red !important;
+}
+// CSS for a-tabs
+.ant-tabs > .ant-tabs-nav .ant-tabs-nav-more, .ant-tabs > div > .ant-tabs-nav .ant-tabs-nav-more {
+  display: none !important;
+}
+// CSS for a-radio-button
+.ant-radio-button-wrapper-checked:not([class*=' ant-radio-button-wrapper-disabled']).ant-radio-button-wrapper:first-child {
+  background: $flowkit-green !important;
+  color: $flowkit-white !important;
+  border-radius: 8px
+}
+.ant-radio-button-wrapper:not(:first-child)::before {
+  display: none !important;
+}
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):last-child {
+  background: $status-waiting !important;
+  color: $flowkit-white !important;
+  border-radius: 8px
+}
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):focus-within {
+  box-shadow: none !important;
+}
+.ant-radio-button-wrapper {
+  text-align: center;
+  background: $light-gray !important;
+  color: $secondary-darkgrey !important;
+  border-radius: 8px;
+  border: none !important;
+}
+.ant-radio-group.ant-radio-group-outline {
+  background: $light-gray !important;
+  border-radius: 8px;
+  border: 0.25px solid $secondary-gray !important
+}
+// CSS for a-dropdown
+.ant-dropdown-menu-item-icon {
+  max-width: 10% !important;
+}
+
+.ant-layout {
+  background: $main-light !important;
+}
+.ant-pagination-prev .ant-pagination-item-link {
+  display: none !important;
+}
+.ant-pagination-next .ant-pagination-item-link {
+  display: none !important;
+}
+.ant-pagination-options-size-changer.ant-select {
+  display: none !important
+}

@@ -1,0 +1,61 @@
+{
+  "name": "cashback-admin",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "pm2-c": "pm2 --name adminCB serve --spa dist 8181",
+    "pm2-d": "pm2 delete adminCB",
+    "deploy": "npm run build && npm run pm2-d && npm run pm2-c",
+    "deploy-first": "npm run build && npm run pm2-c"
+  },
+  "dependencies": {
+    "ant-design-vue": "^3.2.15",
+    "axios": "^1.2.1",
+    "core-js": "^3.8.3",
+    "highcharts": "^10.3.3",
+    "highcharts-vue": "^1.4.0",
+    "register-service-worker": "^1.7.2",
+    "sass": "^1.56.1",
+    "sass-loader": "^13.2.0",
+    "socket.io-client": "^4.6.2",
+    "vue": "^3.2.13",
+    "vue-router": "^4.1.6",
+    "vuex": "^4.1.0",
+    "vuex-persistedstate": "^4.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-plugin-pwa": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-plugin-vuex": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "dotenv": "^16.0.3",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-vue": "^8.0.3",
+    "lint-staged": "^11.1.2",
+    "sass": "^1.32.7",
+    "sass-loader": "^12.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue}": "vue-cli-service lint"
+  }
+}
