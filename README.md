@@ -1,4 +1,4 @@
-# Have2Grad Front-end Repo
+﻿# Have2Grad Front-end Repo
 
 Các thư viện sử dụng: **Vue 3, Ant-design, Vuex, Vue-router, axios, socketIO**
 Trước khi chạy cần config lại file **.env.local** chứa địa chỉ IP của server, port 1010
