@@ -63,7 +63,7 @@
         </template>
       </a-table>
     </a-col>
-    <ModalDetailInvestor v-model:visible="visibleModalDetailInvestor"/>
+    <ModalDetailUser v-model:visible="visibleModalDetailUser"/>
     <!-- <ModalChangeInvestorPassword v-model:visible="visibleModalChangeInvestorPassword" v-model:investor-id="investorId" title="Đổi mật khẩu" /> -->
   </a-row>
 </template>
@@ -73,7 +73,7 @@ import { useRouter } from 'vue-router'
 import { ref, computed } from 'vue'
 import { useStore } from 'vuex'
 
-import ModalDetailInvestor from '@/components/Modal/InvestorModals/ModalDetailInvestor.vue'
+import ModalDetailUser from '@/components/Modal/InvestorModals/ModalDetailUser.vue'
 // import ModalChangeInvestorPassword from '@/components/Modal/InvestorModals/ModalChangeInvestorPassword.vue'
 import RedButton from '@/components/Button/RedButton.vue'
 
@@ -81,7 +81,7 @@ const store = useStore()
 await store.dispatch('user/fetchListUser')
 const listUser = computed(() => store.getters['user/getListUser'])
 const router = useRouter()
-const visibleModalDetailInvestor = ref(false)
+const visibleModalDetailUser = ref(false)
 // const visibleModalChangeInvestorPassword = ref(false)
 // const investorId = ref()
 const columns = [
@@ -125,7 +125,7 @@ const openDetailUser = (record) => {
   return {
     onClick: async () => {
       await store.dispatch('user/getUser', record._id)
-      visibleModalDetailInvestor.value = true
+      visibleModalDetailUser.value = true
     }
   }
 }
